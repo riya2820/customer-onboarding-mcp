@@ -1,0 +1,13 @@
+Cust #,Company,Email,Phone,Plan,Monthly Rev,Signed Up,Country
+A-1001,Brightline Logistics, ops@brightline.io ,(415) 555-0134,Gold,"$4,200.00",03/15/2024,USA
+A-1002,Tidewater Foods,hello@tidewaterfoods.com,415.555.0199,Silver,$899.00,04/02/2024,USA
+A-1003,Northpeak Analytics,DATA@NORTHPEAK.CO,+1 212 555 0112,Gold,"$12,500.00",01/20/2024,United States
+A-1004,Ember & Oak Studio,studio@emberoak.design,6465550177,Basic,$0.00,05/11/2024,USA
+A-1005,Lumen Robotics,founders@lumenrobotics.ai,,Silver,"$1,150.00",06/03/2024,Canada
+A-1006,Pinecrest Realty,info@pinecrest-realty.com,(720) 555-0101,Basic,N/A,07/19/2024,usa
+A-1007,Quarry Lane Legal,admin@quarrylane,(312) 555-0144,Gold,"$3,300.00",03/09/2024,USA
+A-1008,Harbor & Finch,team@harborfinch.co,(617) 555-0187,Silver,$975.00,13/05/2024,USA
+,Mosswood Coffee,orders@mosswood.coffee,(510) 555-0166,Basic,$0.00,09/14/2024,USA
+A-1010,Vantage Point Security,secops@vantagept.com,(202) 555-0119,Platinum,"$22,000.00",10/02/2024,USA
+A-1003,Northpeak Analytics,data@northpeak.co,+1 212 555 0112,Gold,"$12,500.00",01/20/2024,USA
+A-1012,Bluefin Media,hi@bluefin.media,555-0142,Silver,$860.00,08/25/2024,USA
