@@ -39,6 +39,47 @@ def read_file(filename: str) -> list[dict]:
     return result
 
 
+@mcp.tool
+def profile_source(filename: str) -> dict:
+    """Summarize each column so a human (or AI) can see what the data looks like.
+    Example:
+        Input:  "acme.csv"
+        Output: {
+            "file": "acme.csv",
+            "row_count": 12,
+            "columns": [
+                {"column": "Cust #", "fill_rate": 0.92, "distinct": 10,
+                 "samples": ["A-1003", "A-1001", "A-1002"]},
+                ...one dict per column
+            ]
+        }
+    fill_rate: rows with a non-blank value ÷ total rows, rounded to 2 decimals
+    "" and " " both count as blank
+    distinct: how many different non-blank values there are
+    samples: up to 3 of the most common non-blank values
+    """
+    count = 0
+    rows = read_file(filename)                
+    columns = []
+
+    for col in rows[0].keys():
+        values = [] # reset 
+        for row in rows:
+            if row[col].strip():
+                values.append(row[col].strip())
+        count = Counter(values)
+
+        columns.append({
+            "column": col,
+            "fill_rate": round(len(values) / len(rows), 2),
+            "distinct": len(count),
+            "samples": [value for value, _ in count.most_common(3)],
+        })
+
+    return {"file": filename, "row_count": len(rows), "columns": columns}
+
+
+
 # Profile Source
 @mcp.tool
 def profile_source(filename: str) -> dict:
